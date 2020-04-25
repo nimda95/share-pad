@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content="A free tool to help with quick annotation of blank/image/documents in realtime"/>
+        <meta name="author" content="Aymane Taibi"/>
+        <title>Live Pad</title>
+        <link href="assets/style.css" rel="stylesheet"/>
+        <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet'>
+        <link href='//fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet'>
+    </head>
+    <body>
+        <div class="header">
+            <div class="name">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <span id="session-id">Livepad</span>
+            </div>
+            <div class="pad-selection middle-page">
+                <div class="input-container">
+                    <input id="id-input" class="input" placeholder="Pad" autofocus maxlength="50"/>
+                    <button class="button" onclick="accessPad()">
+                        <i class="fas fa-sign-in-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="page-selection middle-h">
+                <ul>
+                    <a href="javascript:void()">
+                        <li class="tool">
+                            <i class="fas fa-chevron-left"></i>
+                        </li>
+                    </a>
+                    <li class="page-selector">
+                        <select>
+                            <option value="1">1/1</option>
+                        </select>
+                    </li>
+                    <a href="javascript:void()">
+                        <li class="tool">
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="toolbar">
+                <ul>
+                    <a href="javascript:void()">
+                        <li class="tool active">
+                            <i class="fas fa-mouse-pointer"></i>
+                        </li>
+                    </a>
+                    <a href="javascript:void()">
+                        <li class="tool">
+                            <i class="fas fa-palette"></i>
+                        </li>
+                    </a>
+                    <a href="javascript:void()">
+                        <li class="tool">
+                            <i class="fas fa-eraser"></i>
+                        </li>
+                    </a>
+                    <!-- <a href="https://github.com/nimda95/livepad">
+                        <li class="tool">
+                            <i class="icon-github"></i>
+                        </li>
+                    </a> -->
+                </ul>
+            </div>
+            <input type="checkbox" id="toggle-show-help"/>
+            <div class="help-toggle">
+                <label for="toggle-show-help">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help</span>
+                </label>
+                <label for="toggle-show-help">
+                    <span class="close-help fas fa-times"></span>
+                </label>
+                <div class="help-content">
+                    <!-- Some dummy text that will be replaced with an iframe maybe ?-->
+                    <h2>1. What is this tool ?</h2>
+
+                    <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+                    <h2>Header Level 2</h2>
+
+                    <ol>
+                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                    <li>Aliquam tincidunt mauris eu risus.</li>
+                    </ol>
+
+                    <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+
+                    <h3>Header Level 3</h3>
+
+                    <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                    <li>Aliquam tincidunt mauris eu risus.</li>
+                    </ul>
+
+<pre><code>
+#header h1 a {
+    display: block;
+    width: 300px;
+    height: 80px;
+}
+</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+        </div>
+        <div class="footer">
+        </div>
+        <div class="draw-area">
+            <canvas id="canvas"></canvas>
+        </div>
+        <script src="assets/script.js"></script>
+        <script src="assets/i18n.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+    </body>
+</html>

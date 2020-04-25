@@ -1,0 +1,79 @@
+{
+    "#0_syncId":{
+        "type":"int",
+        "description":"Used to make sure that all the users are receiving commands in sync (usefl also if the one client disconnects, or the server haven't received one of the comment"
+    },
+    "#1_commandId":{
+        "type":"int",
+        "description": "Id of the command to execute",
+        "possibleValues":{
+            "0": {
+                "description":"Put down the pen on the whiteboard",
+                "nextValues":{
+                    "#2_x":{
+                        "type":"int",
+                        "description":"X position to where to put the pen on teh whiteboard"
+                    },
+                    "#3_y":{
+                        "type":"int",
+                        "description":"Y position to where to put the pen on teh whiteboard"
+                    }
+                }
+            },
+            "1":{
+                "description": "Move the pen on the white board (will draw the line obviously)",
+                "nextValues":{
+                    "#2_x":{
+                        "type":"int",
+                        "description":"X position to where to move the pen on teh whiteboard"
+                    },
+                    "#3_y":{
+                        "type":"int",
+                        "description":"Y position to where to move the pen on teh whiteboard"
+                    }
+                }
+            },
+            "2":{
+                "description": "lift the pen off the drawing borad"
+            },
+            "3": {
+                "description":"Setup drawing area with data comming from the server",
+                "nextValues":{
+                    "#2_pad_width":{
+                        "type":"int",
+                        "description":"Width of the draw area in pixels"
+                    },
+                    "#3_pad_height":{
+                        "type":"int",
+                        "description":"Height of the draw area in pixels"
+                    },
+                    "#4_rights":{
+                        "type":"int",
+                        "description":"Tells what to give to the user as access rights",
+                        "possibleValues":{
+                            "0": "sit tight and watch (read-only)",
+                            "1": "collaborate nicely (read-write)",
+                            "2": "full admin rights (root access :D)"
+                        }
+                    }
+                }
+            },
+            "4":{
+                "description":"Revert a draw",
+                "nextValues":{
+                    "#2_syncId":{
+                        "description": "ID of the command's syncId to revert to [WORK IN PROGRESS]"
+                    }
+                }
+            },
+            "5":{
+                "description":"Set Permanant ID",
+                "nextValues":{
+                    "#2_websocketId":{
+                        "description": "ID of the websocket (must be stored in localstorage)"
+                    }
+                }
+            }
+        }
+    }
+}
