@@ -202,7 +202,7 @@ let timeouts = {}
 let connectWs = () => {
     //TODO: implement somekind of load balancing that detects which websocket endpoint to connect to it
     let baseWebSocketUrl = "ws" + (document.location.protocol.startsWith("https") ? "s" : "") +
-        "://ws." + document.location.host.split(":")[0] + ":9000/" + padPath;
+        "://ws." + document.location.host.split(":")[0] + ":8443/" + padPath;
     socket = new WebSocket(baseWebSocketUrl)
     socket.onopen = socketEvents.onopen
     socket.onclose = socketEvents.onclose
